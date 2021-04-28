@@ -1,0 +1,33 @@
+.App {
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+}
+
+.search-form {
+  min-height: 10vh;
+  display: inline;
+  justify-content: center;
+  align-content: center;
+}
+
+.search-input {
+  width: 50%;
+  border: none;
+  padding: 10px;
+}
+
+.search-button {
+  background-color: lightseagreen;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+}
+
+.recipes {
+  border: 10%;
+  padding: 10px;
+  color: blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
