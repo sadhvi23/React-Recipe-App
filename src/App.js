@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Recipe from "./recipe";
 
 export default function App() {
+  // Api Auth details
   const APP_ID = "ae87c63a";
   const APP_KEY = "9e12bf42049bdee65b0f652fb95fef64";
 
@@ -11,11 +12,13 @@ export default function App() {
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("Peanuts");
 
+  // Basic hook action
   useEffect(() => {
     console.log("Effect has been run");
     getRecipes();
   }, [query]);
 
+  // Function to get recipe data
   const getRecipes = async () => {
     const response = await fetch(
       `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
@@ -25,10 +28,12 @@ export default function App() {
     setRecipes(data.hits);
   };
 
+  // Update search attribute
   const updateSearch = (e) => {
     setSearch(e.target.value);
   };
 
+  // Get search attribute after search has been clicked
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
